@@ -1,0 +1,4 @@
+{
+	"name" : "TestModule",
+	"main" : "./lib/circle.js"
+}
