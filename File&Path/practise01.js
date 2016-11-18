@@ -1,10 +1,17 @@
 var fs = require("fs"),
 	FILE_URL = "./myfile.txt";
 
-fs.exists(FILE_URL,function(exists){
-	console.log(" exists "+exists);
-	
-	fs.readFile(FILE_URL,function(err,data){
-		console.log(data.toString());
+function readFile(filePath){
+	fs.exists(filePath,function(exists){
+		console.log(" exists "+exists);
+		
+		fs.readFile(filePath,function(err,data){
+			console.log(data.toString());
+		});
 	});
-});
+}
+
+
+//readFile(FILE_URL);
+FILE_URL = "./sourceFile.txt";
+readFile(FILE_URL);
